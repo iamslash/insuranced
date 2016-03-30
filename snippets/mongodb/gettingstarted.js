@@ -409,19 +409,65 @@ var url = 'mongodb://localhost:27017/test';
 // });
 
 
-// Drop a Collection
+// // Drop a Collection
 
-var dropRestaurants = function(db, callback) {
-   db.collection('restaurants').drop( function(err, response) {
-      console.log(response)
-      callback();
-   });
+// var dropRestaurants = function(db, callback) {
+//    db.collection('restaurants').drop( function(err, response) {
+//       console.log(response)
+//       callback();
+//    });
+// };
+
+// MongoClient.connect(url, function(err, db) {
+//   assert.equal(null, err);
+
+//   dropRestaurants(db, function() {
+//       db.close();
+//   });
+// });
+
+
+
+// * Data Aggregation
+
+// // ** Group Documents by a Field and Calculate Count
+
+// var aggregateRestaurants = function(db, callback) {
+//    db.collection('restaurants').aggregate(
+//      [
+//        { $group: { "_id": "$borough", "count": { $sum: 1 } } }
+//      ]).toArray(function(err, result) {
+//      assert.equal(err, null);
+//      console.log(result);
+//      callback(result);
+//    });
+// };
+
+// MongoClient.connect(url, function(err, db) {
+//   assert.equal(null, err);
+//   aggregateRestaurants(db, function() {
+//       db.close();
+//   });
+// });
+
+// ** Filter and Group Documents
+
+var aggregateRestaurants = function(db, callback) {
+   db.collection('restaurants').aggregate(
+     [
+       { $match: { "borough": "Queens", "cuisine": "Brazilian" } },
+       { $group: { "_id": "$address.zipcode" , "count": { $sum: 1 } } }
+     ]).toArray(function(err, result) {
+       assert.equal(err, null);
+       console.log(result);
+       callback(result);
+     });
 };
+
 
 MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);
-
-  dropRestaurants(db, function() {
+  aggregateRestaurants(db, function() {
       db.close();
   });
 });

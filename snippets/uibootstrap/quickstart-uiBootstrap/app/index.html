@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="quickstart">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quckstart for UI Bootstrap</title>
+
+  <!-- build:css styles/vendor.css -->
+  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+</head>
+<body>
+
+  <div class="container">
+    <ng-include src="'alert.html'"></ng-include>
+    <ng-include src="'button.html'"></ng-include>
+    <ng-include src="'collapse.html'"></ng-include>
+    <ng-include src="'dropdown.html'"></ng-include>
+    <ng-include src="'modal.html'"></ng-include>
+
+    <ng-include src="'accordion.html'"></ng-include>
+    <ng-include src="'popover.html'"></ng-include>
+    <ng-include src="'progressbar.html'"></ng-include>
+    <ng-include src="'tabs.html'"></ng-include>
+    <ng-include src="'tooltip.html'"></ng-include>
+  </div>
+
+  <!-- build:js scripts/vendor.js -->
+  <script src="./bower_components/angular/angular.js"></script>
+  <script src="./bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <script src="scripts/modal.ctrl.js"></script>
+  <script src="scripts/dropdown.ctrl.js"></script>
+  <script src="scripts/collapse.ctrl.js"></script>
+  <script src="scripts/alert.ctrl.js"></script>
+  <script src="scripts/button.ctrl.js"></script>
+  <script src="scripts/progressbar.ctrl.js"></script>
+  <script src="scripts/accordion.ctrl.js"></script>
+  <script src="scripts/popover.ctrl.js"></script>
+  <script src="scripts/tooltip.ctrl.js"></script>
+  <script src="scripts/tabs.ctrl.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

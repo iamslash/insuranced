@@ -1,0 +1,20 @@
+{
+  "name": "quickstart-uiBootstrap",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jeonghwan-kim/quickstart-uiBootstrap",
+  "authors": [
+    "jeonghwan <ej88ej@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.13.3",
+    "bootstrap": "~3.3.5"
+  }
+}

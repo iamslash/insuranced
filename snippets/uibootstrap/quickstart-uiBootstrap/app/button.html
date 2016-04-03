@@ -1,0 +1,24 @@
+<div ng-controller="ButtonCtrl">
+  <h1>Button</h1>
+  <div class="form-group">
+    <button type="button" class="btn btn-primary" ng-model="button1" btn-checkbox
+            btn-checkbox-true="1" btn-checkbox-false="0">버튼1</button>
+    <pre>{{button1}}</pre>
+  </div>
+  <div class="form-group">
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary" ng-model="buttons.left" btn-checkbox>Left</button>
+      <button type="button" class="btn btn-primary" ng-model="buttons.middle" btn-checkbox>Middle</button>
+      <button type="button" class="btn btn-primary" ng-model="buttons.right" btn-checkbox>Right</button>
+    </div>
+    <pre>{{buttons|json}}</pre>
+  </div>
+  <div class="form-group">
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary" ng-model="button2" btn-radio="'left'">Left</button>
+      <button type="button" class="btn btn-primary" ng-model="button2" btn-radio="'middle'">Middle</button>
+      <button type="button" class="btn btn-primary" ng-model="button2" btn-radio="'right'">Right</button>
+    </div>
+    <pre>{{button2}}</pre>
+  </div>
+</div>

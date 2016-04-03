@@ -1,0 +1,19 @@
+<div ng-controller="TooltipCtrl">
+
+  <h1>Tooltip</h1>
+
+  <div class="form-group">
+    <input class="form-control" type="text" value="클릭해 보세요!"
+           tooltip="보이죠? 여기를 클릭세보세요."
+           tooltip-trigger="focus"
+           tooltip-placement="bottom"/>
+  </div>
+
+  <div class="form-group">
+    <input class="form-control" type="text" value="마우스를 여기로 이동해 보세요!"
+           tooltip="보이죠? 마우스를 필드 밖으로 옮겨보세요."
+           tooltip-trigger="mouseenter"
+           tooltip-placement="top"/>
+  </div>
+
+</div>

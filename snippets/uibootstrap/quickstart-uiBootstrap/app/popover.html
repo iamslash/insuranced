@@ -1,0 +1,23 @@
+<div ng-controller="PopoverCtrl">
+
+  <h1>Popover</h1>
+
+  <button popover="내용"
+          popover-title="제목"
+          type="button"
+          class="btn btn-default">클릭하면 팝오버가 나타납니다
+  </button>
+
+  <button popover-template="'myPopoverTemplate.html'"
+          popover-title="제목"
+          type="button"
+          class="btn btn-default">클릭하면 템플릿 팝오버가 나타납니다
+  </button>
+
+  <script type="text/ng-template" id="myPopoverTemplate.html">
+    <div>내용</div>
+    <div class="form-group">
+      <input class="form-control" type="text" ng-model="title" >
+    </div>
+  </script>
+</div>

@@ -1,0 +1,18 @@
+<div ng-controller="AccordionCtrl">
+
+  <h1>Accordion</h1>
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" ng-model="closeOthers">
+      하나만 열기
+    </label>
+  </div>
+
+  <accordion close-others="closeOthers">
+    <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+      {{group.content}}
+    </accordion-group>
+  </accordion>
+
+</div>

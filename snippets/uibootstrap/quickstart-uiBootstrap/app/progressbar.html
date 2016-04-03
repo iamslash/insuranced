@@ -1,0 +1,13 @@
+<div ng-controller="ProgressbarCtrl">
+
+  <h1>Progressbar</h1>
+
+  <div ng-repeat="p in progressbars">
+    <progressbar class="{{p.classes}}" type="{{p.type}}" value="p.value"
+                 max="p.max">
+      <i>{{p.value}} / {{p.max}}</i>
+    </progressbar>
+  </div>
+
+
+</div>

@@ -36,3 +36,10 @@ node_modules
 dist
 .tmp
 bower_components
+
+# for /snippet/angular/angular-phonecat
+!.gitkeep
+tmp
+.idea
+.DS_Store
+angular-phonecat-snapshots

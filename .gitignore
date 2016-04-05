@@ -42,4 +42,4 @@ bower_components
 tmp
 .idea
 .DS_Store
-angular-phonecat-snapshots
+#angular-phonecat-snapshots

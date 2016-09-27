@@ -7,12 +7,22 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+$("document").ready(
+    $("button").click(function(){
+	$.post("http://108.61.161.213/input_contact.js", function(data, status){
+	    alert("Data: " + data + "\nStatus: " + status);
+	});
+    });
+);
+  </script>
+
 </head>
 <body>
 
 <div class="container">
   <h2>Vertical (basic) form</h2>
-  <form action="http://108.61.161.213/input_contact.js">
+  <form>
     <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" class="form-control" id="email" placeholder="Enter email">

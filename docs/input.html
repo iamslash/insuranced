@@ -9,7 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
   $(document).ready(function(){
-    $("p").click(function(){
+    $("button").click(function(){
       $.post("http://108.61.161.213/input_contact.js",
         function(data, status) { alert("Data: " + data + "\nStatus: " + status);
       });

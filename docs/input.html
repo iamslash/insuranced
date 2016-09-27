@@ -9,10 +9,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
   $(document).ready(function(){
-    $("button").click(function(){
+    $("#reqcontact").submit(function() {
       $.post("http://108.61.161.213/input_contact.js",
+        {email : "iamslash@gmail.com"},
         function(data, status) { alert("Data: " + data + "\nStatus: " + status);
       });
+        return true;
     });
   });
   </script>
@@ -22,7 +24,7 @@
 
 <div class="container">
   <h2>Vertical (basic) form</h2>
-  <form>
+  <form id="reqcontact">
     <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" class="form-control" id="email" placeholder="Enter email">

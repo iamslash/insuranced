@@ -13,5 +13,10 @@
     "express": "^4.13.4",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.0"
   }
 }

@@ -9,6 +9,8 @@ var gimagemin = require('gulp-imagemin');
 var gfilecache = require('gulp-file-cache');
 var gclean = require('gulp-clean');
 var gnodemon = require('gulp-nodemon');
+var guglify = require('gulp-uglify');
+var gconcat = require('gulp-concat');
 
 var browsersync = require('browser-sync');
 
@@ -27,11 +29,11 @@ const SRC = {
 };
 
 const DST = {
-  JS: DIR.DST + '/public/js/*.js',
-  CSS: DIR.DST + '/public/css/*.css',
-  IMG: DIR.DST + '/public/img/*',
-  VIEWS: DIR.DST + '/views/*.ejs',
-  ROUTES: DIR.DST + '/routes/**/*.js'
+  JS: DIR.DST + '/public/js',
+  CSS: DIR.DST + '/public/css',
+  IMG: DIR.DST + '/public/img',
+  VIEWS: DIR.DST + '/views',
+  ROUTES: DIR.DST + '/routes'
 };
 
 // we'd need a slight delay to reload browsers
@@ -54,6 +56,14 @@ gulp.task('img', () => {
     return gulp.src(SRC.IMG)
            .pipe(gimagemin())
            .pipe(gulp.dest(DST.IMG));
+});
+
+// combine js files to one file.
+gulp.task('combine-js', function () {
+	return gulp.src(SRC.ROUTES)
+		.pipe(gconcat('script.js'))
+		.pipe(guglify())
+		.pipe(gulp.dest(DST.ROUTES));
 });
 
 gulp.task('start', function (cb) {

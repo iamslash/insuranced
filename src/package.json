@@ -25,6 +25,7 @@
     "gulp-file-cache": "0.0.1",
     "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^3.0.3",
+    "gulp-jslint": "^1.0.5",
     "gulp-nodemon": "^2.2.0",
     "gulp-util": "^3.0.7",
     "nodemon": "^1.10.2"

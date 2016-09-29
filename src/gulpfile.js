@@ -11,6 +11,7 @@ var gclean = require('gulp-clean');
 var gnodemon = require('gulp-nodemon');
 var guglify = require('gulp-uglify');
 var gconcat = require('gulp-concat');
+var gjslint = require('gulp-jslint');
 
 var browsersync = require('browser-sync');
 
@@ -64,6 +65,12 @@ gulp.task('combine-js', function () {
 		.pipe(gconcat('script.js'))
 		.pipe(guglify())
 		.pipe(gulp.dest(DST.ROUTES));
+});
+
+gulp.task('lint-js', function () {
+    return gulp.src(['source.js'])
+            .pipe(gjslint({ /* this object represents the JSLint directives being passed down */ }))
+            .pipe(gjslint.reporter( 'stylish' ));
 });
 
 gulp.task('start', function (cb) {

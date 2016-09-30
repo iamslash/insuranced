@@ -1,32 +1,32 @@
-//'use strict';
+'use strict';
 
 // require modules
 var gulp = require('gulp');
-var gutil = require('gulp-util');
+//var gutil = require('gulp-util');
 var gcleancss = require('gulp-clean-css');
-var ghtmlmin = require('gulp-htmlmin');
+//var ghtmlmin = require('gulp-htmlmin');
 var gimagemin = require('gulp-imagemin');
-var gfilecache = require('gulp-file-cache');
+//var gfilecache = require('gulp-file-cache');
 var gclean = require('gulp-clean');
 var gnodemon = require('gulp-nodemon');
 var guglify = require('gulp-uglify');
 var gconcat = require('gulp-concat');
 var gjslint = require('gulp-jslint');
 
-var browsersync = require('browser-sync');
+//var browsersync = require('browser-sync');
 
 // configures
 const DIR = {
-    SRC: '../src',
-    DST: '../dist'
+  SRC: '../src',
+  DST: '../dist'
 };
 
 const SRC = {
-    JS: DIR.SRC + '/public/js/*.js',
-    CSS: DIR.SRC + '/public/css/*.css',
-    IMG: DIR.SRC + '/public/img/*',
-    VIEWS: DIR.SRC + '/views/*.ejs',
-    ROUTES: DIR.SRC + '/routes/**/*.js'
+  JS: DIR.SRC + '/public/js/*.js',
+  CSS: DIR.SRC + '/public/css/*.css',
+  IMG: DIR.SRC + '/public/img/*',
+  VIEWS: DIR.SRC + '/views/*.ejs',
+  ROUTES: DIR.SRC + '/routes/**/*.js'
 };
 
 const DST = {
@@ -39,36 +39,36 @@ const DST = {
 
 // we'd need a slight delay to reload browsers
 // connected to browser-sync after restarting gnodemon
-var BROWSER_SYNC_RELOAD_DELAY = 500;
+//var BROWSER_SYNC_RELOAD_DELAY = 500;
 
 // clean dist directory
 gulp.task('clean', () => {
-    return gulp.src(DIR.DST+'/*', {read: false})
+  return gulp.src(DIR.DST+'/*', {read: false})
     .pipe(gclean({force: true}));
 });
 
 gulp.task('css', () => {
-    return gulp.src(SRC.CSS)
+  return gulp.src(SRC.CSS)
            .pipe(gcleancss({compatibility: 'ie8'}))
            .pipe(gulp.dest(DST.CSS));
 });
 
 gulp.task('img', () => {
-    return gulp.src(SRC.IMG)
+  return gulp.src(SRC.IMG)
            .pipe(gimagemin())
            .pipe(gulp.dest(DST.IMG));
 });
 
 // combine js files to one file.
 gulp.task('combine-js', function () {
-	return gulp.src(SRC.ROUTES)
+  return gulp.src(SRC.ROUTES)
 		.pipe(gconcat('script.js'))
 		.pipe(guglify())
 		.pipe(gulp.dest(DST.ROUTES));
 });
 
 gulp.task('lint-js', function () {
-    return gulp.src(['source.js'])
+  return gulp.src(['source.js'])
             .pipe(gjslint({ /* this object represents the JSLint directives being passed down */ }))
             .pipe(gjslint.reporter( 'stylish' ));
 });

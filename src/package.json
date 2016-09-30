@@ -18,6 +18,8 @@
     "browser-sync": "^2.16.0",
     "browserify": "^13.1.0",
     "del": "^2.2.2",
+    "eslint": "^3.6.1",
+    "eslint-config-google": "^0.6.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^2.0.13",

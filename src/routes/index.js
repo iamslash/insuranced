@@ -1,5 +1,11 @@
 module.exports = function(app, Book)
 {
+
+    /* GET home page. */
+    app.get('/', function(req, res, next) {
+      res.render('index', { title: 'Express' });
+    });
+
     // GET ALL BOOKS
     app.get('/api/books', function(req,res){
         Book.find(function(err, books){
@@ -11,9 +17,9 @@ module.exports = function(app, Book)
     // GET SINGLE BOOK
     app.get('/api/books/:book_id', function(req, res){
         Book.findOne({_id: req.params.book_id}, function(err, book){
-            if(err) 
+            if(err)
                 return res.status(500).json({error: err});
-            if(!book) 
+            if(!book)
                 return res.status(404).json({error: 'book not found'});
             res.json(book);
         })
@@ -83,5 +89,5 @@ module.exports = function(app, Book)
             res.status(204).end();
         })
     });
-     
+
 }

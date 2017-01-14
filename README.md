@@ -8,4 +8,10 @@ This is a example repository about web frameworks. I show you several examples o
 
 ## flask
 
+```python
+> cd src/myflask
+> python a.py
+
+```
+
 ## django

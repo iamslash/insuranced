@@ -1,0 +1,17 @@
+{
+  "name": "postgres_node",
+  "version": "0.0.1",
+  "description": "postgres node example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "postgres"
+  ],
+  "author": "iamslash",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^6.1.2"
+  }
+}

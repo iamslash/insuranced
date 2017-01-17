@@ -1,6 +1,11 @@
 # Intro
 
-This is a example repository about web frameworks. I show you several examples of frameworks including front, back end. 
+This is a example repository about web frameworks. I will make
+examples of web service using several frameworks with example
+database. 
+
+I will use sakila and pagila. sakila is an example database
+with mysql. pagila is an converted example database with postgres.
 
 # frameworks
 
@@ -15,3 +20,11 @@ This is a example repository about web frameworks. I show you several examples o
 ```
 
 ## django
+
+## Ruby on rails
+
+
+# database
+
+## sakila
+## pagila

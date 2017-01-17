@@ -1,6 +1,6 @@
 # Intro
 
-This is a example repository about web frameworks. I will make
+This is an example repository about web frameworks. I will make
 examples of web service using several frameworks with example
 database. 
 

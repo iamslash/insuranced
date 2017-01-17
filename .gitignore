@@ -43,3 +43,12 @@ tmp
 .idea
 .DS_Store
 #angular-phonecat-snapshots
+#
+
+########################################
+# elm
+########################################
+# elm-package generated files
+elm-stuff
+# elm-repl generated files
+repl-temp-*

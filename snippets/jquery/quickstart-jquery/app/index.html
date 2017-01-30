@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Quckstart for jQuery</title>
+	<meta name="description" content="">
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+	<!-- build:css styles/main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild -->
+
+	<!-- build:css styles/vendor.css -->
+	<link rel="stylesheet" href="../bower_components/iCheck/skins/all.css">
+	<link rel="stylesheet" href="../bower_components/chosen/chosen.css">
+	<!-- endbuild -->
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1 id="slogan">Hello, Quick start</h1>
+			<h2>
+				<img class="logo" src="images/logo-jquery@2x.png">
+			</h2>
+			<p class="lead"></p>
+		</div>
+		<div class="row">
+			<h4>Input box</h4>
+			<input type="text" id="typing" style="width:350px" placeholder="Type words and then enter..."></input>
+		</div>
+		<div class="row">
+			<h4>Select with <a href="http://goo.gl/TgKzj">chosen</a> plugin</h4>
+			<select class="chosen-select" data-placeholder="Select words..." style="width:350px;" tabindex="1">
+	            <option value=""></option>
+	            <option value="Hello">Hello</option>
+	            <option value="Quickstart">Quickstart</option>
+	            <option value="jQuery">jQuery</option>
+	            <option value="HTML5">HTML5</option>
+	            <option value="WebFrameworks">WebFrameworks</option>
+	        </select>
+        </div>
+        <div class="row">
+        	<h4>Select with <a href="https://github.com/fronteed/iCheck">iCheck</a></h4>
+        	<ul id="icheck-input">
+	    		<li><input type="radio" name="slogan" value="Hello"><label>Hello</label></li>
+	    		<li><input type="radio" name="slogan" value="Quickstart"><label>Quickstart</label></li>
+				<li><input type="radio" name="slogan" value="jQuery"><label>jQuery</label></li>
+				<li><input type="radio" name="slogan" value="WebFramework"><label>WebFramework</label></li>
+			</ul>
+    	</div>
+	</div>
+	
+	<!-- build:js scripts/vendor.js -->
+	<script src="../bower_components/jquery/dist/jquery.js"></script>
+	<script src="../bower_components/iCheck/iCheck.js"></script>
+	<script src="../bower_components/chosen/chosen.jquery.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js scripts/main.min.js -->
+	<script src="scripts/main.js"></script>
+	<!-- endbuild -->
+</body>
+</html>

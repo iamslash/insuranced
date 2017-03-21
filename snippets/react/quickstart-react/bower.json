@@ -1,0 +1,19 @@
+{
+  "name": "quickstart-react",
+  "description": "",
+  "main": "",
+  "authors": [
+    "jt <jt.jung@wepla.net>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/KoreaHTML5/quickstart-react",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}

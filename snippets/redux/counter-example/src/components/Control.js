@@ -1,8 +1,9 @@
 import React, { Component, PropTypes } from 'react';
+
 const propTypes = {
   onPlus: PropTypes.func,
   onSubtract: PropTypes.func,
-  onRandomizeColor: PropTypesfunc
+  onRandomizeColor: PropTypes.func
 };
 
 function createWarning(funcName) {
@@ -14,16 +15,23 @@ const defaultProps = {
   onSubtract: createWarning('onSubtract'),
   onRandomizeColor: createWarning('onRandomizeColor')  
 };
+
 class Control extends Component {
     constructor(props) {
         super(props);
     }
     render() {
         return(
-            <div>Control</div>
+            <div>
+                <button onClick={this.props.onPlus}>+</button>
+                <button onClick={this.props.onSubtract}>-</button>
+                <button onClick={this.props.onRandomizeColor}>Randomize Color</button>
+            </div>
         );
     }
 }
+
 Control.propTypes = propTypes;
 Control.defaultProps = defaultProps;
+
 export default Control;

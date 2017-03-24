@@ -20,12 +20,12 @@ export default function counter(state = initialState, action) {
         number: state.number + 1,
         dumbObject: { ...state.dumbObject, u: 0}
       };
-    case types.DECREMENT {
+    case types.DECREMENT :
       return {
         ...state,
         number:state.number - 1
-      }
-    }
+      };
+    
     default:
       return state;
   }

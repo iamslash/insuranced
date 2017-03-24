@@ -1,15 +1,17 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 import Value from './Value';
 import Control from './Control';
-// import { connect, bindActionCreators } from 'react-redux';
+import { connect } from 'react-redux';
 
-import * as actions from './actions';
+import * as actions from '../actions';
 
 const propTypes = {
 };
+
 const defaultProps = {
 };
+
 class Counter extends Component {
     constructor(props) {
         super(props);
@@ -28,7 +30,7 @@ class Counter extends Component {
 
     render() {
 
-        const color = this.props.color;
+        //const color = this.props.color;
         const style = {
           background: 'rgb(${color[0]}, ${color[1]}, ${color[2]} )'
         }
@@ -59,9 +61,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   // return bindActionCreators(actions, dispath);
   return {
-    handleIncrement: () => { dispath(actions.increment())},
-    handleDecrement: () => { dispath(actions.decrement())},
-    handleSetColor: (color) => { dispath(actions.setColor(color))}
+    handleIncrement: () => { dispatch(actions.increment())},
+    handleDecrement: () => { dispatch(actions.decrement())},
+    handleSetColor: (color) => { dispatch(actions.setColor(color))}
   }
 }
 

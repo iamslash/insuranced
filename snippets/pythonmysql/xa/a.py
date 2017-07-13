@@ -21,7 +21,10 @@ def bar(c):
     print(rows)
 
 if __name__ == '__main__':
-    c = pymysql.connect(host='localhost', user='iamslash', 
+    c0 = pymysql.connect(host='localhost', port=3306, user='iamslash', 
         password='skekakstp', db='test', charset='utf8');
-    bar(c)
+    c1 = pymysql.connect(host='localhost', port=4306, user='iamslash', 
+        password='skekakstp', db='test', charset='utf8');
+    bar(c0)
+    bar(c1)
     c.close()

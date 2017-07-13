@@ -1,0 +1,17 @@
+{
+  "name": "a",
+  "version": "0.0.0",
+  "description": "fawn example",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "pawn"
+  ],
+  "author": "iamslash",
+  "license": "MIT",
+  "dependencies": {
+    "fawn": "^1.5.1"
+  }
+}

@@ -10,5 +10,5 @@ def foo(c):
 
 if __name__ == '__main__':
     c = pymysql.connect(host='localhost', user='iamslash', 
-        password='skekakstp', db='test', charset='utf8');
+        password='1234', db='test', charset='utf8');
     c.close()

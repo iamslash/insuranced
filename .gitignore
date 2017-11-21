@@ -87,3 +87,20 @@ tests/report/
 # vscode
 ########################################
 .vscode
+
+########################################
+# clojure
+########################################
+
+/target
+/lib
+/classes
+/checkouts
+pom.xml
+*.jar
+*.class
+/.lein-*
+profiles.clj
+/.env
+.nrepl-port
+/log

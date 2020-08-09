@@ -23,11 +23,22 @@ const movies = [
 ]
 
 class App extends Component {
+  // Render: componentWillMount() -> render() -> componentDidMount()
+  //
+  // Update: componentWillReceiveProps() -> shouldComponentUpdate() -> 
+  // componentWillUpate() -> render() -> componentDidUpdate()
+  componentWillMount() {
+    console.log("componentWillMount");
+  }
+  componentDidMount() {
+    console.log("componentDidMount");
+  }
   render() {
+    console.log("render");
     return (
       <div className="App">
-        {movies.map(movie => {
-          return <Movie title={movie.title} poster={movie.poster} />
+        {movies.map((movie, index) => {
+          return <Movie title={movie.title} poster={movie.poster} key={index} />
         })}
       </div>
     );
